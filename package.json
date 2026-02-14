@@ -2,7 +2,7 @@
   "name": "vscode-dotnet-class-generator",
   "displayName": "Dotnet Class Generator",
   "description": "Rider-style C# class, interface, service and constructor generator",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "publisher": "your-name",
   "engines": {
     "vscode": "^1.85.0"
