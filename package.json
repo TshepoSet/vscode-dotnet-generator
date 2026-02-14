@@ -1,0 +1,75 @@
+{
+  "name": "vscode-dotnet-class-generator",
+  "displayName": "Dotnet Class Generator",
+  "description": "Rider-style C# class, interface, service and constructor generator",
+  "version": "0.0.1",
+  "publisher": "your-name",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onCommand:dotnetgen.createClass",
+    "onCommand:dotnetgen.createInterface",
+    "onCommand:dotnetgen.createService",
+    "onCommand:dotnetgen.createController",
+    "onCommand:dotnetgen.generateConstructor"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "dotnetgen.createClass",
+        "title": "Generate C# Class"
+      },
+      {
+        "command": "dotnetgen.createInterface",
+        "title": "Generate C# Interface"
+      },
+      {
+        "command": "dotnetgen.createService",
+        "title": "Generate C# Service"
+      },
+      {
+        "command": "dotnetgen.createController",
+        "title": "Generate C# Controller"
+      },
+      {
+        "command": "dotnetgen.generateConstructor",
+        "title": "Generate Constructor from Fields"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "dotnetgen.createClass",
+          "group": "navigation"
+        },
+        {
+          "command": "dotnetgen.createInterface",
+          "group": "navigation"
+        },
+        {
+          "command": "dotnetgen.createService",
+          "group": "navigation"
+        },
+        {
+          "command": "dotnetgen.createController",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "prepublishOnly": "pnpm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.33",
+    "@types/vscode": "^1.109.0",
+    "typescript": "^5.9.3"
+  }
+}
